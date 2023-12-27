@@ -1,0 +1,18 @@
+    <div class="flex flex-col w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden h-auto min-h-[350px]">
+      <a [href]="gif.images.downsized_large.url" target="_blank">
+        <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden"> <!-- Mantén la relación de aspecto cuadrada -->
+          <!-- <img class="object-cover w-full h-64" [src]="gif.images.downsized_large.url" alt="Imagen" /> -->
+
+          <app-shared-lazy-image [url]="gif.images.downsized_large.url"
+          [alt]="gif.title"
+          class="object-cover w-full h-64"></app-shared-lazy-image>
+        </div>
+
+
+      <div class="p-5 " >
+
+          <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-200 dark:text-white ">{{ gif.title }}</h5>
+
+      </div>
+      </a>
+    </div>

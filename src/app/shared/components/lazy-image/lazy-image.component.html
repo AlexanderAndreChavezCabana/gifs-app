@@ -1,0 +1,9 @@
+<img class="object-cover w-full h-64 animate__animated animate__fadeIn"
+     [src]="url"
+     [alt]="alt"
+     (load)="onLoad()"
+     [ngStyle]="{ display: hasLoaded ? '' : 'none'}"/>
+
+     <div class="flex justify-center items-center">
+      <img *ngIf="!hasLoaded" src="assets/loader.svg" height="35" width="35" class="mt-3" class="object-cover w-full h-64 animate__animated animate__fadeIn">
+    </div>
